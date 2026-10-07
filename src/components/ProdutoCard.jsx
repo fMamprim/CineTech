@@ -9,7 +9,7 @@ export default function ProdutoCard({ produto, onClick, nomeOpcao, precoExtra, i
   return (
     <div className={styles["produto-card"]} onClick={onClick}>
       <div className={styles["produto-img"]} style={fontSize ? { fontSize } : {}}>
-        {imagemExibicao}
+        <img src={imagemExibicao} alt={nomeExibicao} style={{ width: '100%', height: '100px', objectFit: 'contain' }} />
       </div>
       <h3>{nomeExibicao}</h3>
       <p>R$ {precoCalculado.toFixed(2).replace('.', ',')}</p>
